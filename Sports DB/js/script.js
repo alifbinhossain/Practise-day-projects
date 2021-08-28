@@ -1,6 +1,10 @@
 const errorMessage = document.getElementById("error-message");
+const spinner = `<div class="spinner-border text-dark" role="status">
+<span class="visually-hidden">Loading...</span>
+</div>`;
 let wrongSearched;
 const loadPlayer = () => {
+  errorMessage.innerHTML = spinner;
   const searchField = document.getElementById("search-input");
   const playerName = searchField.value;
   wrongSearched = playerName;

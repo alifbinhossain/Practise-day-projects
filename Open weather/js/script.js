@@ -1,17 +1,20 @@
 const heading = document.getElementById("heading");
 const container = document.getElementById("container");
+const spinner = `<div class="spinner-border text-white mt-3" role="status">
+<span class="visually-hidden">Loading...</span>
+</div>`;
 let inputName;
 
 /* ---------------------------- FETCH & LOAD DATA --------------------------- */
 const loadData = () => {
+  container.innerHTML = spinner;
   const inputField = document.getElementById("location-input");
   const locationName = inputField.value;
   inputField.value = "";
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${locationName}&appid=605589626e3cc9c69ccb122babbf0cc6`;
   if (locationName == "") {
-    heading.innerText = `Please enter your city name!`;
-    container.textContent = "";
+    container.innerHTML = `<h4 class="text-white">Please enter your city name..</h4>`;
   } else {
     inputName = locationName;
     fetch(url)
@@ -23,7 +26,7 @@ const loadData = () => {
 /* -------------------------- DISPLAY WEATHER DATA -------------------------- */
 const displayWeather = (weather) => {
   if (weather.cod == 404) {
-    heading.innerText = `Sorry, ${inputName} is not found..`;
+    container.innerHTML = `<h4 class="text-white">Sorry, ${inputName} is not found..</h4>`;
   } else {
     heading.innerText = `Welcome to World Weather`;
     container.textContent = "";
