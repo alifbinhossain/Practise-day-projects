@@ -1,35 +1,41 @@
+/* ------------------------ DECLARE REUSABLE VARIABLE ----------------------- */
 const errorMessage = document.getElementById("error-message");
 const spinner = `<div class="spinner-border text-dark" role="status">
 <span class="visually-hidden">Loading...</span>
 </div>`;
 let wrongSearched;
-const loadPlayer = () => {
+
+/* ---------------------------- FETCH & LOAD DATA --------------------------- */
+const loadPlayer = async () => {
   errorMessage.innerHTML = spinner;
   const searchField = document.getElementById("search-input");
   const playerName = searchField.value;
   wrongSearched = playerName;
   searchField.value = "";
-
   const url = `https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=${playerName}`;
 
+  ////////////CONDITIONS TO LOAD DATA
   if (playerName == "") {
     errorMessage.innerText = `Please enter your player name.. 🙏`;
   } else {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => displayPlayers(data.player));
+    const res = await fetch(url);
+    const data = await res.json();
+    displayPlayers(data.player);
   }
 };
 
+/* -------------------------- DISPLAY DATA ON PAGE -------------------------- */
 const displayPlayers = (players) => {
   const playersConatiner = document.getElementById("Players");
   playersConatiner.textContent = "";
 
+  ///////CONDITIONS TO EXECUTE CODE
   if (players == null) {
     errorMessage.innerText = `Sorry, ${wrongSearched} is not found 😥`;
   } else if (players != null) {
     errorMessage.innerText = `👇 Check your result below 👇`;
     players.forEach((player) => {
+      //////////PLAYER INFO
       const playerName = player.strPlayer;
       const nationality = player.strNationality;
       const playerImg = player.strThumb;
@@ -37,7 +43,6 @@ const displayPlayers = (players) => {
       const playerDOB = player.dateBorn;
       const playerPosition = player.strPosition;
       const playerFacebook = player.strFacebook;
-      console.log(playerFacebook);
 
       const newPlayer = document.createElement("div");
       newPlayer.innerHTML = ` 
