@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Open Weather</title>
+  </head>
+  <body>
+    <header id="header" class="text-center">
+      <h1 id="heading" class="text-white">Welcome to World Weather</h1>
+      <div class="input-group mt-5 mb-3 w-50 mx-auto">
+        <input
+          id="location-input"
+          type="text"
+          class="form-control"
+          placeholder="enter your location"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button
+          onclick="loadData ()"
+          class="btn-search"
+          type="button"
+          id="button-addon2"
+        >
+          Search
+        </button>
+      </div>
+
+      <section id="container"></section>
+      <footer>
+        <small>&copy;All rights reserved by Alif Bin Hossain.</small>
+      </footer>
+    </header>
+
+    <!-- ------------------------------ JS FILES ------------------------------- -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

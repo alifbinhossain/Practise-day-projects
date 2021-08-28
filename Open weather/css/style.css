@@ -1,0 +1,54 @@
+header {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url(../images/pexel.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  padding: 3rem;
+  position: relative;
+}
+.weather-info {
+  width: 20rem;
+  margin: 3rem auto 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.95)
+  );
+  padding: 1rem;
+  border-radius: 3px;
+  color: #54436b;
+}
+
+.btn-search {
+  display: block;
+  background-color: #54436b;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+}
+
+h2,
+h3 {
+  border-bottom: 1px solid #54436b;
+  padding: 0.6rem;
+  width: 70%;
+  margin: 0.4rem auto;
+}
+
+h2 {
+  margin-top: -1.5rem;
+}
+footer {
+  color: #fff;
+  position: absolute;
+  bottom: 1.5rem;
+  border-radius: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
