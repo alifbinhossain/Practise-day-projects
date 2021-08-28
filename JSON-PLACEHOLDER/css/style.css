@@ -1,0 +1,50 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: lightcyan;
+  color: darkslategray;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+.comment {
+  background-color: darkturquoise;
+  padding: 3rem;
+  width: 50%;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+span {
+  font-weight: 500;
+}
+button {
+  display: block;
+  padding: 1.4rem 1.8rem;
+  margin: 2rem auto;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  background-color: darkcyan;
+  color: #fff;
+  cursor: pointer;
+}
+strong {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}

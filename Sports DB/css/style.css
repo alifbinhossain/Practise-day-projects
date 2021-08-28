@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #1b1b2f;
+  background-color: #1f4068;
+}
+header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(26, 26, 46, 0.75),
+      rgb(15, 52, 96, 0.85)
+    ),
+    url(../image/header-cover.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 15rem;
+}
+.btn-search {
+  display: block;
+  width: max-content;
+  background-color: #e43f5a;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  text-decoration: none;
+}
+.btn-search:hover {
+  color: #fff;
+}
+.card-title {
+  font-size: 2rem;
+  background-color: rgba(228, 63, 90, 0.15);
+  padding: 8px 0;
+  border-radius: 3px;
+}
+
+.info-message {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.75)
+  );
+  border-radius: 4px;
+  color: #1b1b2f;
+}
+.card {
+  background-color: #1b1b2f;
+  color: #ececec;
+}
