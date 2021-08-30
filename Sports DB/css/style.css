@@ -52,3 +52,9 @@ header {
 .spinner-border {
   font-size: 1rem;
 }
+
+.player-dp {
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}

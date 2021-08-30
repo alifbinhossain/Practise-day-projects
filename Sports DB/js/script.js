@@ -43,11 +43,16 @@ const displayPlayers = (players) => {
       const playerDOB = player.dateBorn;
       const playerPosition = player.strPosition;
       const playerFacebook = player.strFacebook;
+      console.log(playerImg);
+      let imgUrl = playerImg;
+      if (imgUrl == null) {
+        imgUrl = "../image/default2.png";
+      }
 
       const newPlayer = document.createElement("div");
       newPlayer.innerHTML = ` 
         <div class="card h-100 p-3 text-center">
-            <img src="${playerImg}" class="card-img-top" alt="..." />
+            <img class="player-dp" src="${imgUrl}" class="card-img-top" alt="..." />
           <div class="card-body mx-0 px-0 ">
             <h5 class="card-title mb-3">${playerName}</h5>
             <h6>Nationality : ${nationality}</h6>
